@@ -1,0 +1,400 @@
+/* Import premium fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* Design Tokens & Variables */
+:root {
+    --bg-primary: #020617; /* Darker slate for better depth */
+    --bg-secondary: #0f172a;
+    --accent-primary: #8b5cf6;
+    /* Violet */
+    --accent-secondary: #06b6d4;
+    /* Cyan */
+    --accent-glow: rgba(139, 92, 246, 0.15);
+    --text-main: #ffffff; /* High contrast white */
+    --text-muted: #cbd5e1; /* Much lighter gray for readability */
+    --glass-bg: rgba(15, 23, 42, 0.8); /* Darker and more opaque glass */
+    --glass-border: rgba(255, 255, 255, 0.1); /* Slightly brighter border */
+    --glass-shadow: rgba(0, 0, 0, 0.4);
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Force override Bootstrap's low-contrast text-muted */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+
+/* Global Reset & Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    overflow-x: hidden;
+    position: relative;
+    line-height: 1.6;
+}
+
+/* Stunning Animated Background Glows */
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+    opacity: 0.25; /* Lowered opacity to maximize text contrast */
+    pointer-events: none;
+    animation: glow-float 15s infinite alternate ease-in-out;
+}
+
+body::before {
+    background: var(--accent-primary);
+    top: 10%;
+    left: 10%;
+}
+
+body::after {
+    background: var(--accent-secondary);
+    bottom: 20%;
+    right: 10%;
+    animation-delay: -5s;
+}
+
+@keyframes glow-float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(80px, 50px) scale(1.2);
+    }
+}
+
+/* Custom Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #a855f7 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Custom Glassmorphism Styles */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 var(--glass-shadow);
+    transition: var(--transition-smooth);
+}
+
+.glass-panel:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 40px 0 rgba(139, 92, 246, 0.1);
+    transform: translateY(-4px);
+}
+
+/* Header & Glass Navigation */
+.navbar {
+    background: rgba(3, 7, 18, 0.6) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid var(--glass-border);
+    transition: var(--transition-smooth);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--text-main) !important;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    color: var(--text-muted) !important;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+    padding: 0.5rem 1.2rem !important;
+    border-radius: 8px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--text-main) !important;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Center Profile Hero Section */
+.profile-section {
+    padding: 8rem 0 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.profile-card {
+    text-align: center;
+    padding: 3rem 2.5rem;
+    max-width: 700px;
+    width: 100%;
+}
+
+.profile-avatar-container {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 2rem auto;
+}
+
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--glass-border);
+    position: relative;
+    z-index: 2;
+}
+
+.avatar-glow {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    z-index: 1;
+    animation: spin-glow 6s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes spin-glow {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.profile-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.profile-subtitle {
+    font-size: 1.25rem;
+    color: var(--accent-secondary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.profile-bio {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Action Buttons */
+.btn-premium {
+    background: linear-gradient(135deg, var(--accent-primary) 0%, #7c3aed 100%);
+    color: white !important;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: none;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.btn-premium:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.6);
+    filter: brightness(1.1);
+}
+
+.btn-secondary-premium {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main) !important;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.btn-secondary-premium:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Section Styling */
+.section-title {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    border-radius: 2px;
+}
+
+.section-spacing {
+    padding: 5rem 0;
+}
+
+/* Custom Carousel Styling */
+.carousel-container {
+    padding: 2rem;
+    border-radius: 24px;
+}
+
+.carousel {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(0.85);
+}
+
+/* Custom Grid Cards */
+.card-premium {
+    padding: 2.5rem 2rem;
+    height: 100%;
+}
+
+.card-title-premium {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.card-text-premium {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Skills Badge Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.skill-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+    transition: var(--transition-smooth);
+}
+
+.skill-badge svg {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0.75rem;
+    color: var(--accent-secondary);
+    transition: var(--transition-smooth);
+}
+
+.skill-badge:hover svg {
+    transform: scale(1.15) rotate(5deg);
+    color: var(--accent-primary);
+}
+
+.skill-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+/* Custom Contact Form */
+.contact-form .form-control {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    color: var(--text-main);
+    padding: 0.8rem 1.2rem;
+    transition: var(--transition-smooth);
+}
+
+.contact-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--accent-secondary);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+    color: var(--text-main);
+}
+
+.contact-form label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer Styling */
+footer {
+    border-top: 1px solid var(--glass-border);
+    padding: 2.5rem 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    background: rgba(3, 7, 18, 0.9);
+}

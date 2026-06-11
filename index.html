@@ -4,102 +4,330 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-        crossorigin="anonymous"></script>
+    <title>Sakon Malila | Portfolio</title>
+
+    <!-- Meta tags for SEO -->
+    <meta name="description"
+        content="Personal portfolio of Sakon Malila, a Full Stack Developer and Django specialist. Explore my projects, skills, and get in touch.">
+    <meta name="keywords" content="Sakon Malila, Django Developer, Full Stack Developer, Python, Web Portfolio">
+    <meta name="author" content="Sakon Malila">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home" id="nav-logo">
+                <span class="gradient-text">SAKON.DEV</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" href="#home" id="link-home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                        <a class="nav-link" href="#about" id="link-about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        <a class="nav-link" href="#projects" id="link-projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills" id="link-skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" id="link-contact">Contact</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
-    <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <div class="row mt-4">
-        <div class="row">
-            <div class="col-sm-6 mb-3 mb-sm-0">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home / Profile Section (Centered with Background) -->
+        <section id="home" class="profile-section">
+            <div class="container d-flex justify-content-center">
+                <div class="glass-panel profile-card" id="profile-card-container">
+                    <div class="profile-avatar-container">
+                        <div class="avatar-glow"></div>
+                        <img src="image/4.JPG" alt="Sakon Malila Profile" class="profile-avatar"
+                            id="profile-avatar-img">
+                    </div>
+                    <h1 class="profile-title" id="profile-name">
+                        <span class="gradient-text">Sakon Malila</span>
+                    </h1>
+                    <p class="profile-subtitle" id="profile-role">Full Stack & Django Developer</p>
+                    <p class="profile-bio" id="profile-description">
+                        I'm a first-year computer science student. I enjoy programming.
+                    </p>
+                    <div class="profile-actions">
+                        <a href="#projects" class="btn-premium" id="btn-view-work">
+                            View Work <i class="bi bi-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn-secondary-premium" id="btn-contact-me">
+                            Contact Me <i class="bi bi-chat-text"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section-spacing">
+            <div class="container">
+                <h2 class="section-title"><span class="gradient-text">About Me</span></h2>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-8">
+                        <div class="glass-panel p-4" id="about-card">
+                            <h3 class="mb-3">Brief history</h3>
+                            <p class="text-muted">
+                                I am a second-year computer science student. I am interested in computer
+                                programming.With a focus on backend development using Django and Python, I enjoy
+                                bridging the gap
+                                between database structure and intuitive user interfaces. I'm dedicated to continuous
+                                learning and implementing software development best practices.
+                            </p>
+                            <div class="row mt-4">
+                                <div class="col-md-6 mb-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-briefcase text-info fs-3"></i>
+                                        <div>
+                                            <h6 class="mb-0">Experience</h6>
+                                            <small class="text-muted">Web Development & Django</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-code-slash text-warning fs-3"></i>
+                                        <div>
+                                            <h6 class="mb-0">Focus</h6>
+                                            <small class="text-muted">Clean Architecture & APIs</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Projects Section (Carousel Showcase) -->
+        <section id="projects" class="section-spacing">
+            <div class="container">
+                <h2 class="section-title"><span class="gradient-text">Featured Works</span></h2>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-10">
+                        <div class="glass-panel carousel-container" id="carousel-panel">
+                            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" data-bs-interval="4000">
+                                        <img src="image/1.JPG" class="d-block w-100" alt="Project 1">
+                                        <div
+                                            class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                                            <h5>Sound of sisaket</h5>
+                                            <p>I am an officer responsible for assisting and providing guidance to
+                                                guests attending the event.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="4000">
+                                        <img src="image/2.JPG" class="d-block w-100" alt="Project 2">
+                                        <div
+                                            class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                                            <h5>Club</h5>
+                                            <p>Take care of those participating in the university sports event.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="4000">
+                                        <img src="image/3.JPG" class="d-block w-100" alt="Project 3">
+                                        <div
+                                            class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                                            <h5>camp</h5>
+                                            <p>Taking care of the children, improving the school, painting the school.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-spacing">
+            <div class="container">
+                <h2 class="section-title"><span class="gradient-text">Skills & Tech Stack</span></h2>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-8">
+                        <div class="glass-panel p-4" id="skills-panel">
+                            <div class="skills-grid">
+                                <div class="skill-badge glass-panel" id="skill-django">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                                        <line x1="4" y1="22" x2="4" y2="15"></line>
+                                    </svg>
+                                    <span class="skill-name">Django</span>
+                                </div>
+                                <div class="skill-badge glass-panel" id="skill-python">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    <span class="skill-name">Python</span>
+                                </div>
+                                <div class="skill-badge glass-panel" id="skill-js">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                        <polyline points="2 17 12 22 22 17"></polyline>
+                                        <polyline points="2 12 12 17 22 12"></polyline>
+                                    </svg>
+                                    <span class="skill-name">JavaScript</span>
+                                </div>
+                                <div class="skill-badge glass-panel" id="skill-html">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                    </svg>
+                                    <span class="skill-name">HTML/CSS</span>
+                                </div>
+                                <div class="skill-badge glass-panel" id="skill-postgres">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                        <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                                    </svg>
+                                    <span class="skill-name">Databases</span>
+                                </div>
+                                <div class="skill-badge glass-panel" id="skill-git">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="18" cy="18" r="3"></circle>
+                                        <circle cx="6" cy="6" r="3"></circle>
+                                        <circle cx="6" cy="18" r="3"></circle>
+                                        <path d="M18 15V9a4 4 0 0 0-4-4H9"></path>
+                                        <line x1="6" y1="9" x2="6" y2="15"></line>
+                                    </svg>
+                                    <span class="skill-name">Git Control</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-spacing">
+            <div class="container">
+                <h2 class="section-title"><span class="gradient-text">Get In Touch</span></h2>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-6">
+                        <div class="glass-panel p-4 contact-form" id="contact-panel">
+                            <form id="portfolio-contact-form">
+                                <div class="mb-3">
+                                    <label for="contact-name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="contact-name" placeholder="John Doe"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contact-email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="contact-email"
+                                        placeholder="name@example.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contact-message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="contact-message" rows="4"
+                                        placeholder="Your message here..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn-premium w-100 justify-content-center"
+                                    id="btn-submit-message">
+                                    Send Message <i class="bi bi-send-fill"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="mb-1">&copy; 2026 Sakon Malila. All rights reserved.</p>
+            <p class="small text-muted mb-0">Built with passion & precision using Vanilla CSS & Django.</p>
         </div>
-    </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Navigation Scroll Active Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').slice(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
